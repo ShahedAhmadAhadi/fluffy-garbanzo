@@ -1,7 +1,7 @@
 const { readFile } = require('fs')
 
 console.log('start')
-readFile('./text.txt', 'utf8', (err, result) => {
+readFile('./event-loops-prac/text.txt', 'utf8', (err, result) => {
     if (err) {
         console.log(err)
         return
