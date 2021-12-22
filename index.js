@@ -1,5 +1,6 @@
 const ProgressBar = require('progress')
 const string = require('./about')
+const exp = require('./exp')
 // const oranges = ['orange', 'orange']
 // const apples = ['just one apple']
 // oranges.forEach(fruit => {
@@ -57,6 +58,56 @@ const string = require('./about')
 //   })
 
   console.log(string)
+  console.log(exp)
+  console.log(exp.xy)
+
+  const fs = require('fs')
+
+// const getFile = (fileName) => {
+//   return new Promise((resolve, reject) => {
+//     fs.readFile(fileName, (err, data) => {
+//       if (err) {
+//         reject(err)  
+//         return
+//       }
+//       resolve(data)
+//     })
+//   })
+// }
+
+// getFile('./event-loops-prac/text.txt')
+// .then(data => console.log(data))
+// .catch(err => console.error(err))
+
+const isItDoneYet = new Promise(/* ... as above ... */)
+//...
+
+const checkIfItsDone = () => {
+  isItDoneYet
+    .then(ok => {
+      console.log(ok)
+    })
+    .catch(err => {
+      console.error(err)
+    })
+}
+
+const doSomethingAsync = () => {
+    return new Promise(resolve => {
+      setTimeout(() => resolve('I did something'), 3000)
+    })
+  }
+  
+  const doSomething = async () => {
+    console.log(await doSomethingAsync())
+  }
+  
+  console.log('Before')
+  doSomething()
+  console.log('After')
+
+
+
   
 
 
