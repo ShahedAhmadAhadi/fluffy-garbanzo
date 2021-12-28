@@ -1,0 +1,3 @@
+const resultPrinter = (filename, result) => {
+
+}

@@ -1,0 +1,12 @@
+AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+[32m+ actual[39m [31m- expected[39m
+
+  [
+    1,
+    2,
+    [
+[32m+[39m     3,
+[31m-[39m     '3',
+      4
+    ]
+  ]
